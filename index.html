@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Piano Store Web App</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .naqd { background: green; color: white; }
+    .karta { background: blue; color: white; }
+    .muddat { background: orange; color: white; }
+  </style>
+
+</head>
+
+<body>
+
+<h2>📊 Admin / Worker Panel</h2>
+
+<div class="card">
+  💰 Bugungi savdo: 0 <br>
+  📦 Ombor: 0 <br>
+  💳 Naqd: 0
+</div>
+
+<div class="card">
+  <h3>🎹 Yamaha P48</h3>
+  <p>Rang: Qora</p>
+  <p>Narx: 4 800 000</p>
+
+  <button class="naqd" onclick="sell('NAQD')">NAQD</button>
+  <button class="karta" onclick="sell('KARTA')">KARTA</button>
+  <button class="muddat" onclick="sell('MUDDATLI')">MUDDATLI</button>
+</div>
+
+<script>
+function sell(type){
+  alert("Sotildi: " + type);
+}
+
+// Telegram Web App init
+const tg = window.Telegram.WebApp;
+tg.expand();
+</script>
+
+</body>
+</html>
